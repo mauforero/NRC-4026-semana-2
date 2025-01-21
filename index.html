@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Redes VLAN - Infraestructura de TI NRC-4026</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        background-color: #f8f9fa;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      aside {
+        margin: auto;
+        padding: 20px 0;
+        max-width: 500px;
+      }
+      #mindmap {
+        background-color: #fff;
+        display: block;
+        margin: auto;
+        border-radius: 15px;
+        width: 98vw;
+        height: 100vh;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.8/dist/style.css"
+    />
+  </head>
+  <body>
+    <h1>Actividad. Redes VLAN</h1>
+    <h2>Infraestructura de TI</h2>
+    <aside>
+      <h3>Instrucciones</h3>
+      <ul>
+        <li>Haga clic en los círculos para expandir cada ítem.</li>
+        <li>
+          Use la rueda del mouse o los controles abajo a la derecha para hacer
+          zoom.
+        </li>
+        <li>Arrastre con el mouse para mover el mapa.</li>
+      </ul>
+    </aside>
+    <svg id="mindmap"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.8/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.8/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "LAN y VLAN",
+          children: [
+            {
+              content: "<strong>Redes de Área Local (LAN)</strong>",
+              children: [
+                {
+                  content:
+                    "Red que conecta dispositivos dentro de un área limitada.",
+                  children: [],
+                  payload: { tag: "li", lines: "9,10" },
+                },
+                {
+                  content: "<strong>Características</strong>",
+                  children: [
+                    {
+                      content: "Alcance físico limitado.",
+                      children: [],
+                      payload: { tag: "li", lines: "11,12" },
+                    },
+                    {
+                      content: "Sin segmentación lógica.",
+                      children: [],
+                      payload: { tag: "li", lines: "12,13" },
+                    },
+                    {
+                      content: "Menor complejidad.",
+                      children: [],
+                      payload: { tag: "li", lines: "13,14" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "10,14" },
+                },
+                {
+                  content:
+                    "<strong>Ejemplo:</strong> Redes domésticas o de pequeñas oficinas.",
+                  children: [],
+                  payload: { tag: "li", lines: "14,16" },
+                },
+              ],
+              payload: { tag: "h2", lines: "8,9" },
+            },
+            {
+              content: "<strong>Redes de Área Local Virtual (VLAN)</strong>",
+              children: [
+                {
+                  content:
+                    "Segmento lógico dentro de una LAN que agrupa dispositivos en una red virtual.",
+                  children: [
+                    {
+                      content: "<strong>Características</strong>",
+                      children: [
+                        {
+                          content: "Creación a través de software.",
+                          children: [],
+                          payload: { tag: "li", lines: "19,20" },
+                        },
+                        {
+                          content: "Segmentación lógica de dispositivos.",
+                          children: [],
+                          payload: { tag: "li", lines: "20,21" },
+                        },
+                        {
+                          content: "Independiente de la ubicación física.",
+                          children: [],
+                          payload: { tag: "li", lines: "21,22" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "18,22" },
+                    },
+                    {
+                      content:
+                        "<strong>Ejemplo:</strong> Redes de departamentos dentro de una empresa.",
+                      children: [],
+                      payload: { tag: "li", lines: "22,24" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "17,18" },
+                },
+                {
+                  content: "<strong>Importancia</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Optimización del tráfico de datos</strong>",
+                      children: [
+                        {
+                          content: "Reducción de colisiones.",
+                          children: [],
+                          payload: { tag: "li", lines: "26,27" },
+                        },
+                        {
+                          content: "Priorización de tráfico crítico.",
+                          children: [],
+                          payload: { tag: "li", lines: "27,28" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "25,28" },
+                    },
+                    {
+                      content: "<strong>Aislamiento de redes</strong>",
+                      children: [
+                        {
+                          content: "Mejora la seguridad.",
+                          children: [],
+                          payload: { tag: "li", lines: "29,30" },
+                        },
+                        {
+                          content: "Evita accesos no autorizados.",
+                          children: [],
+                          payload: { tag: "li", lines: "30,31" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "28,31" },
+                    },
+                    {
+                      content: "<strong>Escalabilidad</strong>",
+                      children: [
+                        {
+                          content:
+                            "Facilidad para agregar nuevos dispositivos y redes.",
+                          children: [],
+                          payload: { tag: "li", lines: "32,33" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "31,33" },
+                    },
+                    {
+                      content: "<strong>Flexibilidad</strong>",
+                      children: [
+                        {
+                          content: "Adaptación a cambios organizacionales.",
+                          children: [],
+                          payload: { tag: "li", lines: "34,36" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "33,36" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "24,25" },
+                },
+                {
+                  content: "<strong>Ventajas</strong>",
+                  children: [
+                    {
+                      content: "<strong>Seguridad mejorada</strong>",
+                      children: [
+                        {
+                          content: "Separación de datos sensibles.",
+                          children: [],
+                          payload: { tag: "li", lines: "38,39" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "37,39" },
+                    },
+                    {
+                      content: "<strong>Reducción de costos</strong>",
+                      children: [
+                        {
+                          content: "Menor necesidad de hardware adicional.",
+                          children: [],
+                          payload: { tag: "li", lines: "40,41" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "39,41" },
+                    },
+                    {
+                      content: "<strong>Eficiencia</strong>",
+                      children: [
+                        {
+                          content: "Menor congestión de tráfico.",
+                          children: [],
+                          payload: { tag: "li", lines: "42,43" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "41,43" },
+                    },
+                    {
+                      content: "<strong>Gestión simplificada</strong>",
+                      children: [
+                        {
+                          content: "Fácil administración de redes grandes.",
+                          children: [],
+                          payload: { tag: "li", lines: "44,46" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "43,46" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "36,37" },
+                },
+                {
+                  content: "<strong>Funcionamiento</strong>",
+                  children: [
+                    {
+                      content: "Configuración en switches.",
+                      children: [],
+                      payload: { tag: "li", lines: "47,48" },
+                    },
+                    {
+                      content: "Uso de etiquetas VLAN (IEEE 802.1Q).",
+                      children: [],
+                      payload: { tag: "li", lines: "48,49" },
+                    },
+                    {
+                      content: "Necesidad de routers o switches multicapa.",
+                      children: [],
+                      payload: { tag: "li", lines: "49,52" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "46,47" },
+                },
+              ],
+              payload: { tag: "h2", lines: "16,17" },
+            },
+            {
+              content: "<strong>Diferencias entre LAN y VLAN</strong>",
+              children: [
+                {
+                  content: "<strong>LAN</strong>",
+                  children: [
+                    {
+                      content: "Segmentación física.",
+                      children: [],
+                      payload: { tag: "li", lines: "54,55" },
+                    },
+                    {
+                      content:
+                        "Basada en la disposición física de los dispositivos.",
+                      children: [],
+                      payload: { tag: "li", lines: "55,56" },
+                    },
+                    {
+                      content:
+                        "Poca flexibilidad pues las conexiones están determinadas por el cableado físico.",
+                      children: [],
+                      payload: { tag: "li", lines: "56,57" },
+                    },
+                    {
+                      content:
+                        "Menor seguridad, sin aislamiento lógico entre dispositivos dentro de la red.",
+                      children: [],
+                      payload: { tag: "li", lines: "57,58" },
+                    },
+                    {
+                      content:
+                        "Menos eficiente, puede experimentar colisiones y congestión en redes grandes.",
+                      children: [],
+                      payload: { tag: "li", lines: "59,60" },
+                    },
+                    {
+                      content:
+                        "Escalabilidad limitada al alcance físico del cableado.",
+                      children: [],
+                      payload: { tag: "li", lines: "60,61" },
+                    },
+                    {
+                      content: "Menor control sobre el tráfico interno.",
+                      children: [],
+                      payload: { tag: "li", lines: "62,63" },
+                    },
+                    {
+                      content:
+                        "Uso típico en pequeñas redes como oficinas o hogares.",
+                      children: [],
+                      payload: { tag: "li", lines: "63,64" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "53,56" },
+                },
+                {
+                  content: "<strong>VLAN</strong>",
+                  children: [
+                    {
+                      content: "Segmentación lógica dentro de una LAN.",
+                      children: [],
+                      payload: { tag: "li", lines: "57,58" },
+                    },
+                    {
+                      content:
+                        "Basada en configuraciones lógicas independientemente de la ubicación física.",
+                      children: [],
+                      payload: { tag: "li", lines: "58,59" },
+                    },
+                    {
+                      content:
+                        "Alta flexibilidad, pues los dispositivos se agrupan mediante software.",
+                      children: [],
+                      payload: { tag: "li", lines: "59,60" },
+                    },
+                    {
+                      content:
+                        "Permite aislar dispositivos, mejorando la seguridad.",
+                      children: [],
+                      payload: { tag: "li", lines: "60,61" },
+                    },
+                    {
+                      content:
+                        "Reduce colisiones al segmentar lógicamente el tráfico de datos.",
+                      children: [],
+                      payload: { tag: "li", lines: "61,62" },
+                    },
+                    {
+                      content:
+                        "Alta escalabilidad, permite expansión lógica sin modificar la infraestructura física.",
+                      children: [],
+                      payload: { tag: "li", lines: "62,63" },
+                    },
+                    {
+                      content:
+                        "Ofrece un control granular sobre la administración del tráfico.",
+                      children: [],
+                      payload: { tag: "li", lines: "62,63" },
+                    },
+                    {
+                      content: "Uso típico en grandes redes empresariales",
+                      children: [],
+                      payload: { tag: "li", lines: "63,64" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "60,61" },
+                },
+              ],
+              payload: { tag: "h2", lines: "52,53" },
+            },
+            {
+              content: "Palabras Clave",
+              children: [
+                {
+                  content: "1. LAN",
+                  children: [],
+                  payload: { tag: "li", lines: "62,63", listIndex: 1 },
+                },
+                {
+                  content: "2. VLAN",
+                  children: [],
+                  payload: { tag: "li", lines: "63,64", listIndex: 2 },
+                },
+                {
+                  content: "3. Segmentación lógica",
+                  children: [],
+                  payload: { tag: "li", lines: "64,65", listIndex: 3 },
+                },
+                {
+                  content: "4. Seguridad",
+                  children: [],
+                  payload: { tag: "li", lines: "65,66", listIndex: 4 },
+                },
+                {
+                  content: "5. Escalabilidad",
+                  children: [],
+                  payload: { tag: "li", lines: "66,67", listIndex: 5 },
+                },
+                {
+                  content: "6. Flexibilidad",
+                  children: [],
+                  payload: { tag: "li", lines: "67,68", listIndex: 6 },
+                },
+                {
+                  content: "7. Tráfico de datos",
+                  children: [],
+                  payload: { tag: "li", lines: "68,69", listIndex: 7 },
+                },
+                {
+                  content: "8. Optimización",
+                  children: [],
+                  payload: { tag: "li", lines: "69,70", listIndex: 8 },
+                },
+                {
+                  content: "9. Configuración",
+                  children: [],
+                  payload: { tag: "li", lines: "70,71", listIndex: 9 },
+                },
+                {
+                  content: "10. Administración",
+                  children: [],
+                  payload: { tag: "li", lines: "71,73", listIndex: 10 },
+                },
+              ],
+              payload: { tag: "h2", lines: "61,62" },
+            },
+          ],
+          payload: { tag: "h1", lines: "6,7" },
+        },
+        { spacingVertical: 10, initialExpandLevel: 2 }
+      );
+    </script>
+  </body>
+</html>
